@@ -1,0 +1,487 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+}
+
+body {
+  background-color: #89C15E;
+}
+
+.score {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  height: 148px;
+  top: 21px;
+  left: 254px;
+  border: 2px solid white;
+  border-radius: 13px;
+}
+
+.game-rock-title,
+.game-paper-title,
+.game-scissors-title {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 47px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: white;
+}
+
+.game-rock-title {
+  width: 135px;
+  height: 37px;
+  top: 5px;
+  left: 18px;
+}
+
+.game-paper-title {
+  width: 150px;
+  height: 37px;
+  top: 47px;
+  left: 18px;
+}
+
+
+.game-scissors-title {
+  width: 235px;
+  height: 37px;
+  top: 89px;
+  left: 18px;
+}
+
+.c-score,
+.y-score {
+  position: absolute;
+  width: 139px;
+  height: 128px;
+  top: 9px;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.c-score {
+  left: 473px;
+}
+
+.y-score {
+  left: 641px;
+}
+
+.c-score-title,
+.cs-score-title,
+.y-score-title,
+.ys-score-title {
+  position: absolute;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #656565;
+}
+
+.c-score-title {
+  width: 103px;
+  height: 20px;
+  top: 7px;
+  left: 13px;
+}
+
+.cs-score-title,
+.ys-score-title {
+  font-weight: 700;
+  width: 61px;
+  height: 16px;
+  top: 29px;
+}
+
+.cs-score-title {
+  left: 37px;
+}
+
+.y-score-title {
+  width: 50px;
+  height: 16px;
+  top: 7px;
+  left: 35px;
+}
+
+.ys-score-title {
+  left: 30px;
+}
+
+.cs_score,
+.ys_score {
+  position: absolute;
+  width: 79px;
+  height: 63px;
+  top: 50px;
+  left: 29px;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  color: #252525;
+}
+
+.line1,
+.line2,
+.line3 {
+  position: absolute;
+  z-index: -1;
+}
+
+.line1 {
+  width: 152px;
+  top: 365px;
+  left: 598px;
+}
+
+.line2 {
+  width: 95px;
+  top: 422px;
+  left: 691px;
+}
+
+.line3 {
+  width: 95px;
+  top: 422px;
+  left: 547px;
+}
+
+.playarea {
+  position: absolute;
+  top: -70px;
+  left: -90px;
+}
+
+.rock_circle,
+.scissors_circle,
+.paper_circle {
+  position: absolute;
+  width: 120px;
+  height: 116px;
+  top: 318px;
+  cursor: pointer;
+}
+
+.rock_circle {
+  left: 482px;
+}
+
+.scissors_circle {
+  left: 738px;
+}
+
+.paper_circle {
+  top: 518px;
+  left: 608px;
+}
+
+.user_result {
+  position: absolute;
+  width: 130px;
+  height: 16px;
+  top: 274px;
+  left: 351px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: white;
+}
+
+#win-circle,
+#lost-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 270px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 62px 0px #00000021;
+  z-index: -1;
+}
+
+#win-circle {
+  left: 256px;
+}
+
+#lost-circle {
+  left: 727px;
+}
+
+/* used shorthand css methods for repetitive elements */
+#user-rock-win,
+#user-paper-win,
+#user-scissor-win,
+#cpu-rock-win,
+#cpu-paper-win,
+#cpu-scissor-win,
+#user-rock-lost,
+#user-paper-lost,
+#user-scissor-lost,
+#cpu-rock-lost,
+#cpu-paper-lost,
+#cpu-scissor-lost,
+#user-rock-tie,
+#user-paper-tie,
+#user-scissor-tie,
+#cpu-rock-tie,
+#cpu-paper-tie,
+#cpu-scissor-tie {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 321px;
+  display: none;
+}
+
+#user-rock-win,
+#user-paper-win,
+#user-scissor-win,
+#user-rock-lost,
+#user-paper-lost,
+#user-scissor-lost,
+#user-rock-tie,
+#user-paper-tie,
+#user-scissor-tie {
+  left: 315px;
+}
+
+#cpu-rock-win,
+#cpu-paper-win,
+#cpu-scissor-win,
+#cpu-rock-lost,
+#cpu-paper-lost,
+#cpu-scissor-lost,
+#cpu-rock-tie,
+#cpu-paper-tie,
+#cpu-scissor-tie {
+  left: 793px;
+}
+
+.cpu_result,
+.user_result,
+.title-won {
+  position: absolute;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #FFFFFF;
+
+}
+
+.title-against {
+  position: absolute;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+
+.cpu_result {
+  width: 130px;
+  height: 16px;
+  top: 275px;
+  left: 850px;
+  font-size: 17px;
+}
+
+.title-won {
+  width: 212px;
+  height: 36px;
+  top: 387px;
+  left: 534px;
+  font-size: 39px;
+  text-align: center;
+}
+
+.title-against {
+  width: 171px;
+  height: 31px;
+  top: 418px;
+  left: 549px;
+  font-size: 22px;
+  text-align: center;
+}
+
+#play-again-button,
+#rules-button,
+#next-button {
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  font-size: 21px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#play-again-button {
+  width: 174px;
+  height: 44px;
+  top: 506px;
+  left: 708px;
+  margin-left: 2.5rem;
+  background: #FFFFFF;
+  color: #6B6B6B;
+  font-size: 15px;
+}
+
+#rules-button,
+#next-button {
+  width: 119px;
+  height: 40px;
+  top: 543px;
+  background: rgba(140, 196, 97, 1);
+  color: #ffff;
+}
+
+#rules-button {
+  left: 1112px;
+}
+
+#next-button {
+  left: 1100px;
+  display: none;
+}
+
+#win-area,
+#lost-area,
+#tie-area {
+  display: none;
+}
+
+.Game_Rules {
+  position: absolute;
+  width: 303px;
+  height: 367px;
+  left: 1220px;
+  top: 270px;
+}
+
+.close-button {
+  position: absolute;
+  width: 55px;
+  top: 275px;
+  left: 1460px;
+  font-size: 50px;
+  border: 5px solid #FFFFFF;
+  border-radius: 100%;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* winner css */
+.stars,
+.trophy,
+.hurray,
+.won,
+#rules-button,
+.Game_Rules,
+.close-button,
+#play-again-button {
+  position: absolute;
+}
+
+.hurray,
+.won,
+#play-again-button {
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.stars {
+  width: 471px;
+  height: 276px;
+  top: 50px;
+  left: 399px;
+}
+
+.trophy {
+  width: 200.43px;
+  height: 201px;
+  top: 141px;
+  left: 526px;
+  color: #FFD233;
+}
+
+.hurray {
+  font-size: 87px;
+  line-height: 107px;
+  width: 464px;
+  height: 86px;
+  top: 348px;
+  left: 412px;
+}
+
+.won {
+  font-size: 41px;
+  line-height: 48px;
+  width: 467px;
+  height: 48px;
+  top: 445px;
+  left: 412px;
+}
+
+#rules-button {
+  width: 119px;
+  height: 40px;
+  top: 542px;
+  left: 1235px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  font-size: 21px;
+  line-height: 38px;
+  background-color: rgba(140, 196, 97, 1);
+  cursor: pointer;
+  color: #ffff;
+}
+
+.Game_Rules {
+  width: 303px;
+  height: 367px;
+  left: 1047px;
+  top: 159px;
+}
+
+.close-button {
+  width: 55px;
+  top: 163px;
+  left: 1290px;
+  font-size: 50px;
+  border: 5px solid #FFFFFF;
+  border-radius: 100%;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+}
+
+#play-again-button {
+  width: 174px;
+  height: 44px;
+  top: 543px;
+  left: 512px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  background: #FFFFFF;
+  font-size: 15px;
+  line-height: 18px;
+  color: #6B6B6B;
+  cursor: pointer;
+}
