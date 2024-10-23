@@ -22,7 +22,7 @@ function addEventListeners(rulesButton, rulesPopup, closeButton) {
 }
 
 function opennewpage() {
-    window.location.href = "winner.html";
+    window.location.href = "winnerscreen.html";
     updateScore();
 }
 
